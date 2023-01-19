@@ -2,8 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const cors=require("cors")
 const PORT = process.env.PORT;
-const UserRouter=require("./routes/user.route")
-const connect=require("./config/db")
+const UserRouter=require("./src/routes/user.route")
+const connect=require("./src/config/db")
 const app = express();
 // app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -19,6 +19,4 @@ app.listen(PORT, async() => {
  } catch (error) {
   console.log(error);
  }
- 
- 
-});
+ });
