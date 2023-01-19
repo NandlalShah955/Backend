@@ -12,7 +12,7 @@ const bcryptedpass=async(password)=>{
 app.get("/",async(req,res)=>{
     let user=await Users.find()
     res.send(user)
-    // console.log(user)
+   
 })
 
 // Post user request 

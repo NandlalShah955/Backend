@@ -5,7 +5,7 @@ const PORT = process.env.PORT;
 const UserRouter=require("./src/routes/user.route")
 const connect=require("./src/config/db")
 const app = express();
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 app.use("/user",UserRouter)
